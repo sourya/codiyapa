@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+{% if var.loggedin %}
+	<p> <a href="/submit/prob2"> Submit Your Solution </a> </p>
+	<p> <a href="/inputfile/2"> Download Input File </a> </p>
+<b> Time Limit: 1 s </b><br>
+	<pre>
+Being a nonconformist, Raj is displeased with the current state of things, particularly with the order of natural numbers
+(natural number is positive integer number). He is determined to rearrange them. But there are too many natural numbers, so Raj decided to start with the first n.
+He writes down the following sequence of numbers: firstly all odd integers from 1 to n (in ascending order), then all even integers from 1 to n 
+(also in ascending order). Help our hero to find out which number will stand at the position number k.
+
+Input
+The first line contains number of test case: t.
+The second line of input contains integers n and k (1 ≤ k ≤ n ≤ 1000000000).
+
+Output:
+Print the number that will stand at the position number k after Raj's manipulations.
+
+Sample test:
+
+input:
+2
+10 3
+7 7
+
+output:
+5
+6
+</pre>
+{% else %}
+	<p> Log in to continue. </p>
+{% endif %}
+{% endblock %}
