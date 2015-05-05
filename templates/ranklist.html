@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+	<h2> LeaderBoard </h2>
+	<table style="border: 2px solid black">
+	<tr>
+		<th> Name </th>
+		<th> Score </th>
+		<th> Problem 1 </th>
+		<th> Problem2 </th>
+		<th> Problem3 </th>
+	</tr>
+	{% for rank in var.ranks %}
+	<tr style="text-align: center">
+		<td> {{ rank.username }} </td>
+		<td> {{ rank.score }} </td>
+		<td> {{ rank.prob1 }} </td>
+		<td> {{ rank.prob2 }} </td>
+		<td> {{ rank.prob3 }} </td>
+	</tr>
+	{% endfor %}
+	</table>
+{% endblock %}
