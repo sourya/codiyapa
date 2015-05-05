@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+	{% if var.loggedin %}
+		<form action="/result" method="POST" enctype="multipart/form-data">
+			<p> Your code : <input type="file" name="usercode" value="Upload Code"> </p>
+			<p> Your output file : <input type="file" name="useroutput" value="Upload output file"> </p>
+			<input type="hidden" name="prob_code" value={{ var.prob_code }}>
+			<p> <input type="submit" value="Submit"> </p>
+		</form>
+	{% else %}
+		<p> You're not logged in. </p>
+	{% endif %}
+{% endblock %}
