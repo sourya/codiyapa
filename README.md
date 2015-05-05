@@ -24,3 +24,5 @@ and for other errors.
 * The interface is extremely simple (and bland!).
 * Contest can be started with a timer, instead of doing so manually.
 * Put all usernames and passwords in the database instead of a dict.
+
+As for the terrible name, I couldn't think of anything else. :P
